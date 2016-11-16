@@ -31,15 +31,28 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
   </head>
-  <body ng-app="starter">
-
-    <ion-pane>
+  <body ng-app="myNews">
+    <ion-nav-view>
+    <!-- <ion-view></ion-view> -->
+  <!--   <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">NASA Picture of the Day</h1>
+        <a ng-href="#/settingsUrl">Settings</a>
       </ion-header-bar>
       <ion-content>
+    
+      <div ng-controller="groundControl">
+        {{9+9}}
+        {{photo.date}}
+        {{photo.explanation}}
+        <img ng-src="{{photo.url}}">
+      </div>
+      
       </ion-content>
-    </ion-pane>
+    </ion-pane> -->
+     </ion-nav-view>
   </body>
 </html>
