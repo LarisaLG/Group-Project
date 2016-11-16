@@ -1,0 +1,17 @@
+<ion-view>
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">NASA Picture of the Day</h1>
+        <a href="#/settingsUrl">Settings</a>
+      </ion-header-bar>
+      <ion-content>
+      <!--Testing for Today -->
+      <div ng-controller="groundControl">
+        {{9+9}}
+        {{photo.date}}
+        {{photo.explanation}}
+        <img ng-src="{{photo.url}}">
+      </div>
+      <!-- End of Testing for Today -->
+      </ion-content>
+    </ion-pane>
+</ion-view>

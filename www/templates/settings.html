@@ -1,0 +1,16 @@
+<ion-view>
+  <ion-header-bar class="bar-stable">
+        <h1 class="title">Settings</h1>
+        <a href="#/homeUrl">NASA Picture of the Day</a>
+      </ion-header-bar>
+      <ion-content>
+      <h4>Show Pictures from:</h4><br>
+        <ion-list>
+          <ion-radio ng-model="choice" ng-value="'A'">Today</ion-radio>
+          <ion-radio ng-model="choice" ng-value="'B'">Last 7 Days</ion-radio>
+          <ion-radio ng-model="choice" ng-value="'B'">Last 14 Days</ion-radio>
+        </ion-list>
+      
+      </ion-content>
+    </ion-pane>
+</ion-view>
