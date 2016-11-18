@@ -1,5 +1,5 @@
 app.service('dayService', function($http){
-	this.getPhoto = function(callGood, callBad, sevenOrFourteen){
+	this.getPhoto = function(callGood, callBad, numberOfDays){
 	//var url = 'https://api.nasa.gov/planetary/apod?api_key=T0pL0WqhD22V2rBQamplFq1RJYjqVVCrv8OrDgyg';
 	
 
@@ -9,15 +9,15 @@ app.service('dayService', function($http){
 			var theUrl;
 			var outputUrlArray =[];
 			//var d = new Date();
-			function getUrlFormat(sevenOrFourteen){
+			function getUrlFormat(numberOfDays){
 
-				for(i=0;i<sevenOrFourteen;i++){
+				for(i=0;i<numberOfDays;i++){
 					d.setDate(d.getDate() - 1);
 					outputUrlArray.push(url1 + d.toISOString().slice(0, 10) + url3);
 				}
 			}
 
-			getUrlFormat(sevenOrFourteen);
+			getUrlFormat(numberOfDays);
 
 
 

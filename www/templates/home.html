@@ -4,14 +4,17 @@
         <a href="#/settingsUrl">Settings</a>
       </ion-header-bar>
       <ion-content>
-      <div>
- 
-{{what}}
-          {{9+9}}
-          {{photo.date}}
-          {{photo.explanation}}
-          <img ng-src="{{photo.url}}">
+     
+         <div>
+          <!--WHY DON'T THESE APPEAR???-->
+          <p  ng-repeat="photo in photoArray">
+          {{photo.date}}<br>
+          {{photo.explanation}}<br>
+          <img ng-src="{{photo.url}}"><br>
+        </p>
         </div>
+         
+    
       </ion-content>
     </ion-pane>
 </ion-view>

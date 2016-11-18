@@ -27,21 +27,26 @@ var app = angular.module('myNews', ['ionic'])
 })
 
 
-// .config(function($stateProvider, $urlRouterProvider) {
-//   $stateProvider
-//   .state('settingsState', {
-//       url: "/settingsUrl",
-//       templateUrl: 'templates/settings.html',
-//       controller: 'groundControl'
-//   });
+.config(function($stateProvider, $urlRouterProvider) {
 
-//     $stateProvider
-//   .state('homeState', {
-//       url: "/homeUrl",
-//       templateUrl: 'templates/home.html',
-//       controller: 'groundControl'
-//   });
+  $stateProvider
+  .state('settingsState', {
+      url: "/settingsUrl",
+      templateUrl: 'templates/settings.html',
+      controller: 'groundControl'
+  });
 
-// $urlRouterProvider.otherwise('/homeUrl');//change this later to home
+    $stateProvider
+  .state('homeState', {
+      url: "/homeUrl",
+      templateUrl: 'templates/home.html',
+      controller: 'groundControl'
+  });
 
-// });
+$urlRouterProvider.otherwise('/homeUrl');//change this later to home
+
+
+
+});
+
+
