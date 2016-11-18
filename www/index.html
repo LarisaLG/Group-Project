@@ -35,9 +35,8 @@
     <script src="js/services.js"></script>
   </head>
   <body ng-app="myNews">
-    <ion-nav-view>
-    <!-- <ion-view></ion-view> -->
-  <!--   <ion-pane>
+   <!--  <ion-nav-view> -->
+    <ion-pane>
       <ion-header-bar class="bar-stable">
         <h1 class="title">NASA Picture of the Day</h1>
         <a ng-href="#/settingsUrl">Settings</a>
@@ -45,14 +44,27 @@
       <ion-content>
     
       <div ng-controller="groundControl">
-        {{9+9}}
-        {{photo.date}}
-        {{photo.explanation}}
-        <img ng-src="{{photo.url}}">
+         <h4>Show Pictures from:</h4><br>
+        <ion-list>
+          <ion-radio ng-model="numDays" ng-value="1" ng-change="numberDays(numDays)">Today</ion-radio>
+          <ion-radio ng-model="numDays" ng-value="7" ng-click="numberDays(numDays)">Last 7 Days</ion-radio>
+          <ion-radio ng-model="numDays" ng-value="14" ng-click="numberDays(numDays)">Last 14 Days</ion-radio>
+        </ion-list>
+      
+        <div>
+          <p  ng-repeat="photo in photoArray">
+          {{photo.date}}<br>
+          {{photo.explanation}}<br>
+          <img ng-src="{{photo.url}}"><br>
+        </p>
+        </div>
+       
+        
+        
       </div>
       
       </ion-content>
-    </ion-pane> -->
-     </ion-nav-view>
+    </ion-pane>
+    <!--  </ion-nav-view> -->
   </body>
 </html>
