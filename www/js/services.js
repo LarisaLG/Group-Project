@@ -10,10 +10,13 @@ app.service('dayService', function($http){
 			var outputUrlArray =[];
 			//var d = new Date();
 			function getUrlFormat(numberOfDays){
-
+				d.setDate(d.getDate());
+				outputUrlArray.push(url1 + d.toISOString().slice(0, 10) + url3); 
+				if(numberOfDays>1){
 				for(i=0;i<numberOfDays;i++){
 					d.setDate(d.getDate() - 1);
 					outputUrlArray.push(url1 + d.toISOString().slice(0, 10) + url3);
+				}
 				}
 			}
 
@@ -33,16 +36,9 @@ app.service('dayService', function($http){
 		}
 	}
 
-	
-
-
-
-
-
-
-
-
-
-
-	
 });
+
+ app.factory('Data', function(){
+     var photoArray = [];
+     return photoArray;
+ });

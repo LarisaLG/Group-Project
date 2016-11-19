@@ -27,10 +27,13 @@ var app = angular.module('myNews', ['ionic'])
 })
 
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+$ionicConfigProvider.views.maxCache(0);
+
 
   $stateProvider
   .state('settingsState', {
+    //cache: false,
       url: "/settingsUrl",
       templateUrl: 'templates/settings.html',
       controller: 'groundControl'
@@ -39,11 +42,12 @@ var app = angular.module('myNews', ['ionic'])
     $stateProvider
   .state('homeState', {
       url: "/homeUrl",
+      //cache: false,
       templateUrl: 'templates/home.html',
-      controller: 'groundControl'
+      controller: 'majorTom'
   });
 
-$urlRouterProvider.otherwise('/homeUrl');//change this later to home
+$urlRouterProvider.otherwise('/homeUrl');
 
 
 

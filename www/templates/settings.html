@@ -10,14 +10,6 @@
           <ion-radio ng-model="numDays" ng-value="7" ng-click="numberDays(numDays)">Last 7 Days</ion-radio>
           <ion-radio ng-model="numDays" ng-value="14" ng-click="numberDays(numDays)">Last 14 Days</ion-radio>
         </ion-list>
-
-          <div>
-          <p  ng-repeat="photo in photoArray">
-          {{photo.date}}<br>
-          {{photo.explanation}}<br>
-          <img ng-src="{{photo.url}}"><br>
-        </p>
-        </div>
        
       
       </ion-content>
