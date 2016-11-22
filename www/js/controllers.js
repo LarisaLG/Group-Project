@@ -1,10 +1,5 @@
 app.controller('groundControl', function($scope, dayService, Data){
 
-//      $scope.$on('$ionicView.enter', function() {
-// $scope.photoArray = [];
-//   });
-//$rootScope.$broadcast("$ionicView.enter");
-
 		$scope.numberDays = function(numDays){
 		 	switch(numDays) {
 		 	
