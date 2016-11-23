@@ -1,1 +1,21 @@
 /* Empty. Add your own CSS if you like */
+
+.scroll-content{
+  background-color:#62D5C5;
+}
+
+h3 {
+	color: blue;
+	font-weight: bold;
+}
+
+h4 {
+	color: blue;
+	
+}
+
+P{
+	font-family: verdana, trebuchet, sans-serif;
+	line-height: 1.3;
+	font-size: 14pt;
+}
